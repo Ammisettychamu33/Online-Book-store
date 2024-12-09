@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="cart.css">
+    <script>
+    
+        function showBookingMessage(event) {
+            event.preventDefault(); 
+            alert("Booking is Done");
+            window.location.href = event.target.href;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const buyNowLinks = document.querySelectorAll('.book a');
+            buyNowLinks.forEach(link => {
+                link.addEventListener('click', showBookingMessage);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Book Details</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="articles.html">Online Articles</a>
+            <a href="newspaper.html">Newspaper Articles</a>
+        </nav>
+    </header>
+    
+    <div id="book-details">
+        <div class="book" id="book1">
+            <h2>A Treasury to Read With Mummy</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/12757581a.webp" alt="A Treasury to Read With Mummy">
+            <p>A delightful book for reading with children, featuring engaging stories and illustrations.</p>
+            <p><strong>Importance:</strong> Encourages bonding and reading habits from a young age.</p>
+            <a href="https://example.com/book1" target="_blank">Buy Now</a>
+        </div>
+        
+        <div class="book" id="book2">
+            <h2>3 Bestselling Book Combo of Great Stories of Adventure and Thrill</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/14790357a.webp" alt="3 Bestselling Book Combo of Great Stories of Adventure and Thrill">
+            <p>A collection of adventure stories that captivate the imagination.</p>
+            <p><strong>Importance:</strong> Great for young readers who love adventure and excitement.</p>
+            <a href="https://example.com/book2" target="_blank">Buy Now</a>
+        </div>
+        
+        <div class="book" id="book3">
+            <h2>Sawan All Time Great Classics English Novels Set of 10</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/8585335a.webp" alt="Sawan All Time Great Classics English Novels Set of 10">
+            <p>A set of classic English novels that are timeless and enriching.</p>
+            <p><strong>Importance:</strong> Provides exposure to classic literature and enhances literary skills.</p>
+            <a href="https://example.com/book3" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book4">
+            <h2>Sawan Illustrated World Famous Classic Story Book Set of 10</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/8368136a.webp" alt="Sawan Illustrated World Famous Classic Story Book Set of 10">
+            <p>Illustrated editions of famous classic stories that are engaging for all ages.</p>
+            <p><strong>Importance:</strong> Offers a visual and textual experience of classic tales.</p>
+            <a href="https://example.com/book4" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book5">
+            <h2>Harper Collins Level 1 Read Collection Box Set</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/9298969a.webp" alt="Harper Collins Level 1 Read Collection Box Set">
+            <p>A collection of beginner-level books for early readers.</p>
+            <p><strong>Importance:</strong> Ideal for developing reading skills in young children.</p>
+            <a href="https://example.com/book5" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book6">
+            <h2>Pegasus Read And Shine A Rocket To The Moon Level 3</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265375a.webp" alt="Pegasus Read And Shine A Rocket To The Moon Level 3">
+            <p>An exciting book about space exploration for young readers.</p>
+            <p><strong>Importance:</strong> Sparks interest in space and science through engaging stories.</p>
+            <a href="https://example.com/book6" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book7">
+            <h2>Read And Shine Anne Frank</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/1079847a.webp" alt="Read And Shine Anne Frank">
+            <p>A book about Anne Frank’s life and legacy.</p>
+            <p><strong>Importance:</strong> Provides historical insight and fosters empathy and understanding.</p>
+            <a href="https://example.com/book7" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book8">
+            <h2>Pegasus Read And Shine In The Garden Level 2</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265310a.webp" alt="Pegasus Read And Shine In The Garden Level 2">
+            <p>A delightful book about nature and gardening for young readers.</p>
+            <p><strong>Importance:</strong> Encourages an appreciation for nature and gardening skills.</p>
+            <a href="https://example.com/book8" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book9">
+            <h2>Read And Shine APJ Abdul Kalam</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/1079838a.webp" alt="Read And Shine APJ Abdul Kalam">
+            <p>A book highlighting the life and achievements of APJ Abdul Kalam.</p>
+            <p><strong>Importance:</strong> Inspires and educates about the life of a renowned scientist and leader.</p>
+            <a href="https://example.com/book9" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book10">
+            <h2>Pegasus - Read And Shine Jamuna Level 4</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265374a.webp" alt="Pegasus - Read And Shine Jamuna Level 4">
+            <p>A book featuring stories about Jamuna, aimed at advanced readers.</p>
+            <p><strong>Importance:</strong> Enhances reading skills and introduces complex narratives.</p>
+            <a href="https://example.com/book10" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book11">
+            <h2>Pegasus Read And Shine Sam The Cat Level 1</h2>
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265305a.webp" alt="Pegasus Read And Shine Sam The Cat Level 1">
+            <p>A charming book about Sam the Cat, perfect for early readers.</p>
+            <p><strong>Importance:</strong> Engages young readers with fun stories and illustrations.</p>
+            <a href="https://example.com/book11" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book12">
+            <h2>Fiction</h2>
+            <img src="https://miblart.com/wp-content/uploads/2020/01/crime-and-mystery-cover-scaled-1.jpeg" alt="Fiction Book">
+            <p>A captivating fiction book that will keep you on the edge of your seat.</p>
+            <p><strong>Importance:</strong> Engaging storylines and compelling characters.</p>
+            <a href="https://example.com/book12" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book13">
+            <h2>Non-Fiction</h2>
+            <img src="https://www.geekguruji.com/wp-content/uploads/2017/11/best-novels-of-the-21st-century.jpg" alt="Non-Fiction Book">
+            <p>An informative non-fiction book that provides in-depth knowledge on various topics.</p>
+            <p><strong>Importance:</strong> Educational and insightful content.</p>
+            <a href="https://example.com/book13" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book14">
+            <h2>Science Fiction</h2>
+            <img src="https://www.blackgate.com/wp-content/uploads/2018/04/The-Collectors-Book-of-Science-Fiction.jpg" alt="Science Fiction Book">
+            <p>A thrilling science fiction novel that explores futuristic concepts.</p>
+            <p><strong>Importance:</strong> Innovative and imaginative storytelling.</p>
+            <a href="https://example.com/book14" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book15">
+            <h2>Mystery</h2>
+            <img src="https://static2.srcdn.com/wordpress/wp-content/uploads/2020/08/b1-13.jpg" alt="Mystery Book">
+            <p>A suspenseful mystery book full of twists and turns.</p>
+            <p><strong>Importance:</strong> Keeps readers guessing until the very end.</p>
+            <a href="https://example.com/book15" target="_blank">Buy Now</a>
+        </div>
+        
+        <div class="book" id="book16">
+            <h2>Fantasy</h2>
+            <img src="https://miblart.com/wp-content/uploads/2020/12/YA-urban-paranormal-academy-%D0%BA%D0%BE%D0%BF%D1%96%D1%8F-scaled-1.jpg" alt="Fantasy Book">
+            <p>An enchanting fantasy book that transports you to another world.</p>
+            <p><strong>Importance:</strong> Rich world-building and magical adventures.</p>
+            <a href="https://example.com/book16" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book17">
+            <h2>Biography</h2>
+            <img src="https://www.bibliovault.org/thumbs/978-0-8093-8692-5-frontcover.jpg" alt="Biography Book">
+            <p>A detailed biography that chronicles the life of a notable person.</p>
+            <p><strong>Importance:</strong> Inspires and informs through real-life stories.</p>
+            <a href="https://example.com/book17" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="book" id="book18">
+            <h2>Imagination Soup</h2>
+            <img src="https://i1.wp.com/gobookmart.com/wp-content/uploads/2021/07/Best-Historical-Fiction-novels-of-This-year-1.jpg?resize=750%2C1125&ssl=1" alt="Imagination Soup Book">
+            <p>A creative book that sparks the imagination.</p>
+            <p><strong>Importance:</strong> Encourages creative thinking and exploration.</p>
+            <a href="https://example.com/book18" target="_blank">Buy Now</a>
+        </div>
+    </div>
+</body>
+</html>

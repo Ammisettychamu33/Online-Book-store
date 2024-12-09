@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register a New Book</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Register a New Book</h1>
+        </header><br>
+        <main>
+            <form id="registration-form">
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre" required>
+                    <option value="">Select Genre</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="science-fiction">Science Fiction</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="biography">Biography</option>
+                    <option value="mystery">Mystery</option>
+                </select>
+
+                <label for="availability">Availability:</label>
+                <div>
+                    <input type="radio" id="available" name="availability" value="available" required>
+                    <label for="available">Available</label><br>
+                    <input type="radio" id="out-of-stock" name="availability" value="out-of-stock" required>
+                    <label for="out-of-stock">Out of Stock</label>
+                </div>
+                <br>
+                <label for="cover">Book Cover Image URL:</label>
+                <input type="url" id="cover" name="cover" required>
+
+                <button type="submit">Register Book</button>
+            </form>
+        </main>
+    </div>
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const bookData = {
+                title: formData.get('title'),
+                author: formData.get('author'),
+                genre: formData.get('genre'),
+                availability: formData.get('availability'),
+                cover: formData.get('cover'),
+            };
+
+            fetch('/api/register-book', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(bookData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Book registered successfully!');
+                } else {
+                    alert('Failed to register book.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while registering the book.');
+            });
+        });
+    </script>
+</body>
+</html>

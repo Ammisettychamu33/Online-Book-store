@@ -1,0 +1,470 @@
+:root {
+    --primary-color: aqua;
+    --secondary-color: aqua;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background: url('https://thumbs.dreamstime.com/z/huge-computer-smartphone-lot-books-students-using-e-library-online-education-materials-media-files-concept-isometric-141825311.jpg') no-repeat center center/cover; 
+    color: #fff;
+    background-size: cover;
+    padding: 1rem;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    max-height: 50px; 
+    width: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav .cart {
+    position: relative;
+}
+
+.nav .cart-icon {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.nav .cart-icon:hover {
+    color: #f0a500;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+    background-size: cover;
+    border-bottom: 2px solid var(--primary-color); /* Adding a border for emphasis */
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.library {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    overflow-x: auto;
+    position: relative;
+}
+
+.box_shadow {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.lib {
+    display: flex;
+    gap: 1rem;
+}
+
+.cover_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cover_image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.cover_img img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.cover_title {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.cover_title h5 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin: 1rem 0;
+}
+
+p i {
+    font-style: italic;
+}
+
+a {
+    color: aqua;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cover_img img {
+        width: 120px;
+        height: 180px;
+    }
+    
+    .cover_title h5 {
+        font-size: 0.9rem;
+    }
+    
+    .box_shadow {
+        padding: 0.5rem;
+    }
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-around;
+    background: #f9f9f9;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icons i {
+    font-size: 2rem;
+    color: aqua;
+}
+
+.icons h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.icons p {
+    margin: 0;
+}
+
+.featured {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.book {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.book h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.book p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.book .btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.book .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.newsletter {
+    padding: 3rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 40px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-top p {
+    margin: 10px 0;
+}
+
+.footer-top a {
+    color: aqua;
+    text-decoration: none;
+}
+
+.footer-top a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1;
+    min-width: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.box h3 {
+    margin-bottom: 15px;
+    color: aqua;
+}
+
+.box a {
+    color: #343a40;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.box a i {
+    margin-right: 10px;
+}
+
+.map-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.map-container h3 {
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
+}
+
+.share {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.share a {
+    color: #343a40;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.credit span {
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .books-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .header-content {
+        padding: 1rem;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input[type="email"] {
+        width: 100%;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="books.css">
+    <link rel="stylesheet" href="articles.css">
+</head>
+<body>
+    <header>
+        <h1>Best Books to Read</h1>
+        <nav>
+            <a href="books.html">Books</a>
+            <a href="articles.html">Online Articles</a>
+            <a href="newspaper.html">Newspaper Articles</a>
+        </nav>
+    </header>
+
+    <section id="online-articles">
+        <h2>Online Articles</h2>
+        <ul>
+            <li>
+                <a href="https://www.google.com/search?q=How+to+Build+Good+Reading+Habits" target="_blank">
+                    <img src="https://3.bp.blogspot.com/-Oj3-dR3WTE0/WS0zJp_pdSI/AAAAAAAAAgk/DqM_FmnhdjQrb0geJp44dcQgkeRVuq67ACLcB/s1600/ReadingInfographic.jpg" alt="How to Build Good Reading Habits">
+                    Article 1: How to Build Good Reading Habits
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=The+Importance+of+Reading+for+Mental+Health" target="_blank">
+                    <img src="http://oomscholasticblog.com/sites/default/files/styles/a-wide-wide/public/BrainInfographic.jpg?itok=pztBsbV5" alt="The Importance of Reading for Mental Health">
+                    Article 2: The Importance of Reading for Mental Health
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=Top+10+Books+to+Improve+Your+Life" target="_blank">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.ottbxt55Im0U2Xuvhl8eOwHaHa&pid=Api&P=0&h=180" alt="Top 10 Books to Improve Your Life">
+                    Article 3: Top 10 Books to Improve Your Life
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=Benefits+of+Reading+Every+Day" target="_blank">
+                    <img src="https://eerdlings.files.wordpress.com/2019/09/benefits-of-reading-infographics.jpg?w=1232" alt="Benefits of Reading Every Day">
+                    Article 4: Benefits of Reading Every Day
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=How+Reading+Can+Change+Your+Life" target="_blank">
+                    <img src="https://i.pinimg.com/736x/b0/8a/a5/b08aa5265cd15d02ce3c7192ff903b10.jpg" alt="How Reading Can Change Your Life">
+                    Article 5: How Reading Can Change Your Life
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=Reading+Books+vs+Watching+TV" target="_blank">
+                    <img src="https://thevoice.pk/wp-content/uploads/2022/12/Reading-vs-Television-A-Comparative-Analysis-of-Which-Activity-is-Better-for-Your-Mind.png" alt="Reading Books vs Watching TV">
+                    Article 6: Reading Books vs Watching TV
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=Top+Books+for+Personal+Growth" target="_blank">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.1Gxvv3aEQYKBAb4b7aM69gHaD4&pid=Api&rs=1&c=1&qlt=95&w=191&h=100" alt="Top Books for Personal Growth">
+                    Article 7: Top Books for Personal Growth
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=How+to+Choose+Your+Next+Book" target="_blank">
+                    <img src="https://i.pinimg.com/originals/d5/59/a5/d559a5d253f1e1df98b78ea4cd3b3f77.png" alt="How to Choose Your Next Book">
+                    Article 8: How to Choose Your Next Book
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=Best+Books+for+Developing+Critical+Thinking" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/518AH-KZHZL.jpg" alt="Best Books for Developing Critical Thinking">
+                    Article 9: Best Books for Developing Critical Thinking
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/search?q=How+to+Read+More+Books" target="_blank">
+                    <img src="https://s13281.pcdn.co/wp-content/uploads/2020/01/HOW-TO-READ-MORE-BOOKS.jpeg" alt="How to Read More Books">
+                    Article 10: How to Read More Books
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        
+        function setActiveLink() {
+            const links = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+            let index = sections.length;
+
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+            links.forEach((link) => link.classList.remove('active'));
+            links[index].classList.add('active');
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</body>
+</html>

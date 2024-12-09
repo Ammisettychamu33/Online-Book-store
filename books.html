@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="books.css">
+</head>
+<body>
+
+    <header>
+        <h1>Best Books to Read</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="articles.html">Online Articles</a>
+            <a href="newspaper.html">Newspaper Articles</a>
+        </nav>
+    </header>
+    
+<body>
+    <h2>Top Books</h2>
+    <section class="book-list">
+        <div class="book" onclick="redirectToCart('book1')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/12757581a.webp" alt="Book 1">
+            <h3>A Treasury to Read With Mummy</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 5 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book2')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/14790357a.webp" alt="Book 2">
+            <h3>3 Bestselling Book Combo of Great Stories of Adventure and Thrill </h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book3')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/8585335a.webp" alt="Book 3">
+            <h3>Sawan All Time Great Classics English Novels Set of 10</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book4')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/8368136a.webp" alt="Book 4">
+            <h3>Sawan Illustrated World Famous Classic Story Book Set of 10</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book5')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/9298969a.webp" alt="Book 5">
+            <h3>Harper Collins Level 1 Read Collection Box Set</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book6')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265375a.webp" alt="Book 6">
+            <h3>Pegasus Read And Shine A Rocket To The Moon Level 3</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book7')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/1079847a.webp" alt="Book 7">
+            <h3>Read And Shine Anne Frank</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book8')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265310a.webp" alt="Book 8">
+            <h3>Pegasus Read And Shine In The Garden Level 2</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book9')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/1079838a.webp" alt="Book 9">
+            <h3>Read And Shine APJ Abdul Kalam </h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book10')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265374a.webp" alt="Book 10">
+            <h3>Pegasus - Read And Shine Jamuna Level 4</h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+        <div class="book" onclick="redirectToCart('book11')">
+            <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/265305a.webp" alt="Book 11">
+            <h3>Pegasus Read And Shine Sam The Cat Level 1 </h3>
+            <p>Rating: ★★★★☆</p>
+            <p>Time to read: 6 hours</p>
+        </div>
+    </section>
+    <br>
+    <a 
+    type="button" 
+    href="https://www.google.com/search?q=latest+books" target="_blank" aria-label="Search for Latest Books"
+    style="
+        margin-bottom: 20px;
+        display:block; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        font-weight: bold; 
+        text-align: center; 
+        text-decoration: none; 
+        color: #ffffff; 
+        background-color: aqua; 
+        border-radius: 5px; 
+        border: none; 
+        transition: background-color 0.3s, transform 0.3s; 
+    "
+    onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.05)';"
+    onmouseout="this.style.backgroundColor='#007bff'; this.style.transform='scale(1)';"
+>
+    Get Latest Book Updates
+</a>
+    <script>
+        function redirectToCart(bookId) {
+        
+            window.location.href = 'cart.html?book=' + bookId;
+        }
+    </script>
+
+    
+
+</body>
+</html>

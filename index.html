@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/gutenberg/style.css?v=1.1">
+    <link rel="stylesheet" href="/gutenberg/collapsible.css?1.1">
+    <link rel="stylesheet" href="/gutenberg/new_nav.css?v=1.321231">
+    <link rel="stylesheet" href="/gutenberg/pg-desktop-one.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="home.html" class="logo" aria-label="BookStore Logo">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.I82IxFxYQ0Bk3ct1ZUuEAAHaHa&pid=Api&P=0&h=180" alt="BookStore Logo">
+            </a>            
+            <nav class="nav" aria-label="Main Navigation">
+                <a href="home.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="about.html">About</a>
+                <a href="register.html">Register</a>
+                <a href="contact.html">Contact</a>
+                <div class="cart">
+                    <a href="cart.html" class="cart-icon" aria-label="View Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count"></span>
+                    </a>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            function updateCart() {
+                const cartCount = document.getElementById('cart-count');
+                cartCount.textContent = cart.length;
+            }
+    
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default link behavior
+                    const bookElement = button.closest('.book');
+                    const bookId = bookElement.getAttribute('data-book-id');
+    
+                    if (!cart.includes(bookId)) {
+                        cart.push(bookId);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCart();
+                        alert('Book added to cart!');
+                    } else {
+                        alert('Book is already in the cart.');
+                    }
+                });
+            });
+    
+            updateCart();
+        });
+    </script>
+    
+    
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-shipping-fast"></i>
+            <div class="content">
+                <h3>free shipping</h3>
+                <p>order over $100</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>secure payment</h3>
+                <p>100 secure payment</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fas fa-redo-alt"></i>
+            <div class="content">
+                <h3>easy returns</h3>
+                <p>10 days returns</p>
+            </div>
+        </div>
+    
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>24/7 support</h3>
+                <p>call us anytime</p>
+            </div>
+        </div>
+    
+    </section>
+
+<div class="library">
+    <div class="box_shadow">
+        <div class="lib latest no-select">
+            <a href="https://www.google.com/search?q=The+Merry+Five+by+Penn+Shirley" title="The Merry Five" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74313/pg74313.cover.medium.jpg" alt="The Merry Five, Penn Shirley" title="The Merry Five" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>The Merry Five by Penn Shirley</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=Salojen+el%C3%A4m%C3%A4%C3%A4+by+Lauri+Soini" title="Salojen elämää" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74312/pg74312.cover.medium.jpg" alt="Salojen elämää, Lauri Soini" title="Salojen elämää" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>Salojen elämää by Lauri Soini</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=J%C3%A4lleenn%C3%A4keminen+by+Juho+Hoikkanen" title="Jälleennäkeminen" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74311/pg74311.cover.medium.jpg" alt="Jälleennäkeminen, Juho Hoikkanen" title="Jälleennäkeminen" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>Jälleennäkeminen by Juho Hoikkanen</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=Lucia+in+London+by+E.+F.+Benson" title="Lucia in London" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74310/pg74310.cover.medium.jpg" alt="Lucia in London, E. F. Benson" title="Lucia in London" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>Lucia in London by E. F. Benson</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=The+fanatics+by+Miles+Malleson" title="The fanatics" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74309/pg74309.cover.medium.jpg" alt="The fanatics, Miles Malleson" title="The fanatics" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>The fanatics by Miles Malleson</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=A+diplomat%27s+wife+in+Mexico+by+Edith+O%27Shaughnessy" title="A diplomat's wife in Mexico" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74308/pg74308.cover.medium.jpg" alt="A diplomat's wife in Mexico, Edith O'Shaughnessy" title="A diplomat's wife in Mexico" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>A diplomat's wife in Mexico by Edith O'Shaughnessy</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=Wales+by+W.+Watkin+Davies" title="Wales" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74307/pg74307.cover.medium.jpg" alt="Wales, W. Watkin Davies" title="Wales" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>Wales by W. Watkin Davies</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=Life+in+the+Eagle%27s+Nest+by+A.+L.+O.+E." title="Life in the Eagle's Nest" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74306/pg74306.cover.medium.jpg" alt="Life in the Eagle's Nest, A. L. O. E." title="Life in the Eagle's Nest" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>Life in the Eagle's Nest by A. L. O. E.</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=City+of+the+Saints+and+Across+the+Rocky+Mountains+to+California+by+Richard+F.%2C+M.D.+Beard" title="City of the Saints" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74305/pg74305.cover.medium.jpg" alt="City of the Saints, Richard F., M.D. Beard" title="City of the Saints" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>City of the Saints by Richard F., M.D. Beard</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.google.com/search?q=The+Belgian+Cook+Book+by+Marcel+Maeterlinck" title="The Belgian Cook Book" target="_blank">
+                <div class="cover_image">
+                    <div class="cover_img">
+                        <img src="https://www.gutenberg.org/cache/epub/74304/pg74304.cover.medium.jpg" alt="The Belgian Cook Book, Marcel Maeterlinck" title="The Belgian Cook Book" draggable="false" />
+                    </div>
+                    <div class="cover_title">
+                        <h5>The Belgian Cook Book by Marcel Maeterlinck</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<section class="featured">
+    <h2>Featured Books</h2>
+    <div class="books-container">
+        <div class="book" data-book-id="1">
+            <img src="https://miblart.com/wp-content/uploads/2020/01/crime-and-mystery-cover-scaled-1.jpeg" alt="Book 1">
+            <h3>Fiction</h3>
+            <p>$19.99</p>
+            <a href="cart.html?book=1" class="btn add-to-cart">Add to Cart</a>
+        </div>
+        <div class="book" data-book-id="2">
+            <img src="https://www.geekguruji.com/wp-content/uploads/2017/11/best-novels-of-the-21st-century.jpg" alt="Book 2">
+            <h3>Non-Fiction</h3>
+            <p>$29.99</p>
+            <a href="cart.html?book=2" class="btn add-to-cart">Add to Cart</a>
+        </div>
+        <div class="book" data-book-id="3">
+            <img src="https://www.blackgate.com/wp-content/uploads/2018/04/The-Collectors-Book-of-Science-Fiction.jpg" alt="Book 3">
+            <h3>Science Fiction</h3>
+            <p>$15.99</p>
+            <a href="cart.html?book=3" class="btn add-to-cart">Add to Cart</a>
+        </div>
+        <div class="book" data-book-id="4">
+            <img src="https://static2.srcdn.com/wordpress/wp-content/uploads/2020/08/b1-13.jpg" alt="Book 4">
+            <h3>Mystery</h3>
+            <p>$25.99</p>
+            <a href="cart.html?book=4" class="btn add-to-cart">Add to Cart</a>
+        </div>
+        <div class="book" data-book-id="5">
+            <img src="https://miblart.com/wp-content/uploads/2020/12/YA-urban-paranormal-academy-%D0%BA%D0%BE%D0%BF%D1%96%D1%8F-scaled-1.jpg" alt="Book 5">
+            <h3>Fantasy</h3>
+            <p>$20.99</p>
+            <a href="cart.html?book=5" class="btn add-to-cart">Add to Cart</a>
+        </div>
+        <div class="book" data-book-id="6">
+            <img src="https://www.bibliovault.org/thumbs/978-0-8093-8692-5-frontcover.jpg" alt="Book 6">
+            <h3>Biography</h3>
+            <p>$10.99</p>
+            <a href="cart.html?book=6" class="btn add-to-cart">Add to Cart</a>
+        </div>
+        <div class="book" data-book-id="7">
+            <img src="https://i1.wp.com/gobookmart.com/wp-content/uploads/2021/07/Best-Historical-Fiction-novels-of-This-year-1.jpg?resize=750%2C1125&ssl=1" alt="Book 7">
+            <h3>Imagination Soup</h3>
+            <p>$5.99</p>
+            <a href="cart.html?book=7" class="btn add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+        
+                    const bookId = this.getAttribute('data-book-id');
+                    
+                    addToCart(bookId);
+                });
+            });
+        });
+        
+        function addToCart(bookId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+            if (!cart.includes(bookId)) {
+                cart.push(bookId);
+            }
+        
+            localStorage.setItem('cart', JSON.stringify(cart));
+        
+            alert('Book added to cart!');
+        }
+        </script>
+            
+</section>
+    
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-top">
+            <p>&copy; 2024 BookStore. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+        <section class="footer-bottom">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Our Locations</h3>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> India </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+                </div>
+    
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="./index.html"> <i class="fas fa-arrow-right"></i> Home </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Category </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
+                    <a href="./feedback.html"> <i class="fas fa-arrow-right"></i> Feedback </a>
+                </div>
+    
+                <div class="box">
+                    <h3>Extra Links</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Account Info </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Ordered Items </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Privacy Policy </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Payment Method </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Our Services </a>
+                </div>
+    
+                <div class="box">
+                    <h3>Contact Info</h3>
+                    <a href="#"> <i class="fas fa-phone"></i> 9167064054 </a>
+                    <a href="#"> <i class="fas fa-phone"></i> 77388 44717 </a>
+                    <a href="#"> <i class="fas fa-envelope"></i> ammisettychamundeswari0@gmail.com </a>
+                </div>
+            </div>
+    
+            <div class="map-container">
+                <h3>Our Locations on the Map</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2919.5650604354155!2d-75.16522148454682!3d39.95258337944809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c6cf8eebf827%3A0x4e8d8e5b1c5b6b!2sPhiladelphia%2C%20PA!5e0!3m2!1sen!2sus!4v1651163614943!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="share">
+                <a href="https://www.facebook.com/yourprofile" class="fab fa-facebook-f" target="_blank" aria-label="Facebook"></a>
+                <a href="https://www.twitter.com/yourprofile" class="fab fa-twitter" target="_blank" aria-label="Twitter"></a>
+                <a href="https://www.linkedin.com/in/yourprofile" class="fab fa-linkedin" target="_blank" aria-label="LinkedIn"></a>
+            </div>
+            
+    
+            <div class="credit"> Created by <span>Chamundeswari</span> - copyright ©2024 all rights reserved! </div>
+        </section>
+    </div>
+</footer>
+<script>
+    let cart = [];
+    
+    function addToCart(book, price) {
+        cart.push({ book, price });
+        document.getElementById('cart-count').textContent = cart.length;
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart = storedCart;
+        document.getElementById('cart-count').textContent = cart.length;
+    });
+</script>
+    
+</body>
+</html>

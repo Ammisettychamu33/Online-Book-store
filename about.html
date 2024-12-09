@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const feedback = document.querySelector('textarea').value;
+            localStorage.setItem('feedback', feedback);
+
+            const nav = document.querySelector('nav');
+            let feedbackLink = document.querySelector('#feedback-link');
+            
+            if (!feedbackLink) {
+                feedbackLink = document.createElement('a');
+                feedbackLink.id = 'feedback-link';
+                feedbackLink.href = "#feedback";
+                feedbackLink.textContent = "Feedback";
+                nav.appendChild(feedbackLink);
+            }
+
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+   
+<header>
+    <h1>About FeedBacks</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Books List</a>
+    </nav>
+</header>
+
+<section class="reviews" id="reviews">
+    <h1 class="heading"> <span>Customer Reviews</span> </h1>
+
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/pic-1.png" alt="Customer 1">
+                <h3>John Doe</h3>
+                <p>Great selection of books and excellent customer service!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/pic-2.png" alt="Customer 2">
+                <h3>Jane Smith</h3>
+                <p>Fantastic experience! The staff is knowledgeable and friendly.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/pic-3.png" alt="Customer 3">
+                <h3>Emily Johnson</h3>
+                <p>Love the cozy atmosphere and the wide range of book genres available.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/pic-4.png" alt="Customer 4">
+                <h3>Michael Brown</h3>
+                <p>The online ordering system is so easy to use. Highly recommended!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/pic-5.png" alt="Customer 5">
+                <h3>Sarah Davis</h3>
+                <p>Exceptional service and a great collection of rare books.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/pic-6.png" alt="Customer 6">
+                <h3>David Wilson</h3>
+                <p>The staff's recommendations are always spot-on. A must-visit place!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+     
+<section class="feedback" id="feedback">
+    <div class="container">
+        <h1 class="heading"><span>Feedback</span></h1>
+        <form class="feedback-form" onsubmit="handleSubmit(event)">
+            <textarea placeholder="Write your feedback here..." required></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>
